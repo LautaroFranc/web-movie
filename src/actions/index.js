@@ -15,7 +15,8 @@ export function getMovies(titulo) {
       .then(r => r.json())
       .then(json => {
         dispatch({ type:"GET_MOVIES", payload:json });
-      });
+      })
+      .catch(err => console.error(err));
   }
 }
 
@@ -36,7 +37,9 @@ export function RemoveDetalle(){
         .then(r => r.json())
         .then(json => {
           dispatch({ type:"GETMOVIE_DETAIL", payload:json });
-        });
+        })
+      .catch(err => console.error(err));
+      
     }
 }
 
