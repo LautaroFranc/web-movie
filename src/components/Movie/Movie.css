@@ -1,0 +1,78 @@
+.movie-detail{
+  color: #fff;
+  font:400 1rem/2'Asap',sans-serif;
+  display:flex;
+  align-items: center;
+  margin-top: 100px;
+  box-shadow: 0px -20px 100px rgba(0, 0, 0, 0.72);
+
+}
+.conteiner-text{
+  background-color: rgba(5, 5, 11, 0.914);
+  width: 100%;
+  box-shadow: 51px -1px 70px 103px rgba(0, 0, 0, 0.303) inset;
+  padding: 15px;
+  display:flex;
+  flex-direction: row;
+  max-height: 1300px;
+}
+.title{
+  position: absolute;
+  min-width: 400px;
+  margin-left:340px;
+  font-size: 35px;
+  text-align:center ;
+}
+.plot{
+  color:#ccc;
+  position: relative;
+  margin:auto;
+  margin-left:30px;
+  font-size: 15px;
+  max-height:1300px;
+  max-width: 1300px;
+  align-self: center;
+}
+
+.imgPeli img{
+  object-fit: contain;
+  border-radius: 5px;
+}
+.imgPeli .year{
+  display: flex;
+  justify-content: center;
+  background-color: #00CA58;
+  border-radius:5px;
+  font-size: 18px;
+}
+
+.contener-data{
+  display:flex;
+  position: absolute;
+  margin-bottom: 200px;
+  left: 300px;
+  list-style: none;
+}
+.contener-data span{
+  margin-left:50px;
+  border-left: 4px solid #fb0000;
+}
+
+.Genere-cont{
+  position: absolute;
+  min-width: 300px;
+  background-color:#fb0000;
+  border-radius: 5px;
+  top: 80px;
+  margin-left: 50px;
+  display:flex;
+  left:10px;
+  justify-content: center;
+  
+}
+.Genere-item{
+  display: flex;
+  
+  position: relative;
+  font-size: 20px;
+}

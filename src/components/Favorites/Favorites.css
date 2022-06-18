@@ -1,0 +1,28 @@
+
+.container_favori{
+    display: flex;
+    list-style: none;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:flex-start;
+    min-height: 500px;
+    width: 100%;
+    border: 2px solid #ccc;
+}
+.list_movies{
+    display: flex;
+    flex-wrap:wrap;
+    margin-left: 20px;
+}
+.list_movies a{
+    text-decoration: none;
+    color: #fff;
+}
+.list_movies img{
+    width: 500px;
+    height: 100px;
+    object-fit:cover;
+}
+.title p{
+    
+}
