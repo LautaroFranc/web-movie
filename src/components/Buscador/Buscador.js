@@ -69,7 +69,6 @@ function Buscador(props) {
    
     if(carga){
       if (props.movie.length==0) {
-        console.log("a")
         setcarga(<Carga />);
       }else{
         setcarga("");
