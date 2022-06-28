@@ -74,11 +74,11 @@ const initialState = {
                         moviesLoaded: [payload.Error]
                     };
                 }else{
-                return {
-                    ...state,
-                    moviesLoaded: [payload.Error]
-                };
-            }
+                    return {
+                        ...state,
+                        moviesLoaded: [payload.Error]
+                    };
+                }
             }else{
             return {
                ...state,
@@ -86,6 +86,13 @@ const initialState = {
            };
           }
         } 
+
+        case 'REMOVE_MOVIES':{
+            return{
+                ...state,
+                moviesLoaded:[]
+            }
+        }
        
             
         case  "ADD_MOVIE_FAVORITE" : {

@@ -37,6 +37,11 @@ export function RemoveDetalle(){
      type:"REMOVE_DETALLE",
  }
 }
+export function RemoveMovie(){
+  return{
+     type:"REMOVE_MOVIES",
+ }
+}
  export function getMovieDetail(id){
     return async function(dispatch) {
         const r = await fetch(`https://www.omdbapi.com/?apikey=1d7f8b3a&i=${id}&plot=full`);

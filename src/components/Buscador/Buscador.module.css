@@ -90,8 +90,9 @@
 @media (max-width: 768px) {
     .formulario_Err, .form_container {
         top: 70px;
-        margin-right:60px;
-        left: 40px;
+        margin-right:90px;
+        left: 50px;
+        
     }
     .formulario_Err input,.form_container input{
         width: 105%;

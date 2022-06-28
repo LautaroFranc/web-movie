@@ -1,38 +1,40 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
-import { getMovies,addMovieFavorite,RemoveDetalle,Poster} from "../../actions/index";
+import { getMovies,addMovieFavorite,RemoveDetalle,Poster,RemoveMovie} from "../../actions/index";
 import { AiOutlinePlus,AiOutlineRight,AiOutlineLeft} from "react-icons/ai";
 import style from "./Buscador.module.css";
 import styleSarch from "./MoviesBuscador.module.css";
 import PostRamdom from "./PostRamdom";
 import { BsEmojiFrown } from "react-icons/bs";
+import Carga from "./Carga"
 
 let scrollnext=style.pre
 let scrollprev=style.pre
 
 let errSearch= false
+let carga=false
+
 //const SearchRender=[];  pos si queres usarlo
 function Buscador(props) {
-  const [state,settitulo]=React.useState({
-    title: "",
-   
-  });
-
+  const [cargandoSachr,setcarga]=React.useState("")
+  const [state,settitulo]=React.useState({title: ""});
+  React.useEffect(()=>{
+    props.removeDetalle()
+  },[])
  
  function handleChange(event) {
     settitulo({ title: event.target.value });
   }
   function scroll_next(e){
-  
-    document.getElementById("scroll").scrollLeft+=500;
+   document.getElementById("scroll").scrollLeft+=500;
+
 
   }
   function scroll_prev(){
-    document.getElementById("scroll").scrollLeft-=500;
-
-  }
+    document.querySelector('ul').scrollLeft-=500;
   
+  }
   if (props.movie.length>5) {
     scrollnext = styleSarch.scroll_next
     scrollprev = styleSarch.scroll_prev
@@ -55,12 +57,25 @@ function Buscador(props) {
       }
     
     }else{
+      props.removeMovie()
       props.getMovie(state.title);
       props.Poster(true);
-      errSearch=false
+      errSearch=false;
+      carga=true;
     }
   }
-
+  
+  React.useEffect(()=>{
+   
+    if(carga){
+      if (props.movie.length==0) {
+        console.log("a")
+        setcarga(<Carga />);
+      }else{
+        setcarga("");
+      }
+    }
+  },[carga,props.movie])
 
   React.useEffect(()=>{
     setTimeout(()=>{
@@ -80,6 +95,7 @@ function Buscador(props) {
 
     return (
     <div className={props.searchstyle.container_Movie}>
+    {cargandoSachr}
       <PostRamdom  value={props.searchstyle.poster} key={1}/>
         <div className={props.searchstyle.detall_movie}>
           <h2>Movies</h2>
@@ -159,7 +175,7 @@ function mapDispatchTo(dispatch){
       getMovie: title => dispatch(getMovies(title)),
       Poster: valor => dispatch(Poster(valor)),
       removeDetalle:()=> dispatch(RemoveDetalle()),
-      
+      removeMovie: ()=> dispatch(RemoveMovie())
     }
 }
 

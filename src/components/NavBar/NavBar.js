@@ -33,7 +33,8 @@ export default function NavBar() {
 
 	}
 	function onClickCondicion(e) {
-		if(e.clientX<86 && e.clientX!==0){
+
+		if(e.clientX<86&&e.clientX!==0){
 			onclikMenu()
 		}
 	}

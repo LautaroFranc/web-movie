@@ -157,7 +157,6 @@
     border-radius:100%;
     color: #e50914;
     font-size:50px;
-
     position: absolute;
     top: 45vh;
     z-index: 5;
@@ -173,7 +172,6 @@
 
 .scroll_next:hover,
 .scroll_prev:hover{
-    
     outline:10px solid rgb(76, 166, 166);
 }
 
