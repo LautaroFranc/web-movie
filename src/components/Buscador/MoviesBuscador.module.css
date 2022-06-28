@@ -173,7 +173,7 @@
 
 .scroll_next:hover,
 .scroll_prev:hover{
-    opacity:100%;
+    
     outline:10px solid rgb(76, 166, 166);
 }
 
