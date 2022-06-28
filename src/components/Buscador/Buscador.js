@@ -23,7 +23,8 @@ function Buscador(props) {
  function handleChange(event) {
     settitulo({ title: event.target.value });
   }
-  function scroll_next(){
+  function scroll_next(e){
+    console.log(e)
     document.querySelector('.MoviesBuscador_Contenr_buscador__n0UvF').scrollLeft+=500;
   }
   function scroll_prev(){
