@@ -27,6 +27,7 @@
     align-items: center;
     height: 100%;
 }
+
 .list_item a{
     border-radius: 2px;
     color: #fff;
@@ -40,6 +41,11 @@
     text-align: center;
 }
 
+.list_item p{
+    color: #fff;
+    margin-left: 10px;
+    position: absolute;
+}
 .list_item a:hover,
 .list_item a.active{
     background-color: #fb0000;
@@ -102,7 +108,7 @@
     .list{
         display:none;
     }
-    .scrol,.list-reponsi{
+    .scrol,.list-reponsi {
         height: 200vh;
         width: 70%;
         display: flex;
@@ -156,6 +162,12 @@
         margin-left: 10px;
         text-decoration: none;
         text-align: center;
+    }
+    .list_item-reponsi p{
+        color: #fff;
+        top:-2px;
+        margin-left: 10px;
+        position: absolute;
     }
     .list_item-reponsi a:hover,
     .list_item-reponsi a.active{

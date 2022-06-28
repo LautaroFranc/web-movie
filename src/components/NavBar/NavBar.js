@@ -35,7 +35,7 @@ export default function NavBar() {
 
 	}
 	function onClickCondicion(e) {
-
+		console.log(e)
 		if(e.clientX<86&&e.clientX!==0){
 			onclikMenu()
 		}
@@ -50,10 +50,12 @@ export default function NavBar() {
 				<nav>
 					<ul className={menu.ul}>
 							<li className={menu.li}>
-								<NavLink exact to="/" onClick={(e) => onClickCondicion(e)}><AiFillHome/>Home</NavLink>
+								<p><AiFillHome/></p>
+								<NavLink exact to="/" onClick={(e) => onClickCondicion(e)}>Home</NavLink>
 							</li>
 							<li className={menu.li}> 
-								<NavLink to="/favs"  onClick={(e) => onClickCondicion(e)}><GoFileDirectory/> Favorites</NavLink>
+							<p><GoFileDirectory/></p>
+								<NavLink to="/favs"  onClick={(e) => onClickCondicion(e)}> Favorites</NavLink>
 							</li>
 					</ul>
 				</nav>
