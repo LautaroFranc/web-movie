@@ -89,6 +89,10 @@ const initialState = {
        
             
         case  "ADD_MOVIE_FAVORITE" : {
+            let repit=state.moviesFavourites.find(movie=>movie.title==payload.title);
+            if(repit){
+                return state
+            }
             return {
                     ...state,
                     moviesFavourites: state.moviesFavourites.concat(payload)
