@@ -1,0 +1,232 @@
+.Erro_movies{
+    margin-left:35%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.Erro_emojin{
+    min-width: 100%;
+    margin-top:70px;
+    text-align:center;
+    font-size:18rem;
+    color: #fff;
+}
+.container {
+    color: #fff;
+}
+.formulario_Err,.formulario {
+    position: relative;
+    z-index: 2;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    
+}
+
+.formulario_Err button,.formulario button {
+    margin-left: 20px;
+    border-radius:3px;
+    border : none;
+    color: #fff;
+    padding:15px 20px;
+    background-color:#e50914;
+    cursor: pointer;
+}
+.formulario_Err button:active,
+.form_container button:active{
+    background-color:#b20710;
+    outline: 1px solid rgba(255, 255, 255, 0.166);
+}
+.formulario_Err input,.formulario input{
+    width: 700px;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 5px;
+    border:none;
+    outline: none;
+    border-radius:5px;
+    border: 1px solid #434;
+}
+.formulario_Err input{
+    border: 1px solid rgb(255, 0, 0);
+
+ animation: Error 0.1s 3;
+}
+@keyframes Error {
+    0%{
+    
+        margin-right: 4px
+    }
+    50%{
+        
+       margin-left: 4px;
+    }
+    100%{
+        
+       margin-left: 0px;
+        margin-right: 0px
+
+    }
+}
+
+.detalles{
+    display: none;
+}
+
+.Contenr_buscador{
+    display:flex;
+    margin-left:5px;
+    padding-left: 5px;
+    position: relative;
+    flex-direction:row;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    top: 100px;
+}
+
+.Contenr_buscador::-webkit-scrollbar{
+    background:none;
+}
+.list_movies{
+    list-style: none;
+    margin:10px;
+}
+.list_movies:hover{
+    opacity:70%;
+}
+.list_movies img{
+    max-width: 200px;
+    width:400px;
+    height: 200px;
+    object-fit: cover;
+}
+.list_movies> a{
+    text-decoration: none;
+    color: #fff;
+    font-size:1.4rem;
+    border:none;
+}
+
+.title p{
+    text-align:center;
+}
+.type{
+    color: rgb(224, 228, 4);
+}
+
+.btmfv button{
+    height: 40px;
+    width: 40px;
+    background-color:rgb(255, 200, 0);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    bottom:20px;
+    border-radius:50%;
+    cursor: pointer;
+    border: none;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+.btmfv button:active{
+    background-color:rgb(236, 144, 4);
+
+}
+.btmfv button:hover{
+    width: 42px;
+    height: 42px;
+}
+
+.scroll_next,
+.scroll_prev{
+    width: 70px;
+    height: 70px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+        
+    border: none;
+    border-radius:100%;
+    color: #e50914;
+    font-size:50px;
+    opacity: 50%;
+
+    position: absolute;
+    top: 45vh;
+    z-index: 5;
+    cursor: pointer;
+    transition: opacity 0.5s;
+}
+.scroll_next{
+    left: 94%;
+}
+.scroll_prev{
+    left:10px;
+}
+
+.scroll_next:hover,
+.scroll_prev:hover{
+    opacity:100%;
+    outline:10px solid rgb(76, 166, 166);
+}
+
+@media (max-width: 768px) {
+    .formulario_Err, .formulario {
+        top:60px;
+        margin-right:60px;
+    }
+    
+    .formulario_Err button,.formulario button {
+        margin-right: 10px;
+        padding:12px 15px;
+    }
+    .formulario_Err input, .formulario input{
+        width: 105%;
+        height: 40px;
+        font-size: 1rem;
+        padding-left: 1px;
+    }
+    .list_movies img{
+        border-radius:5px;
+        max-width:120px;
+        height:150px;
+        object-fit: cover;
+    }
+    .list_movies> a{
+        text-decoration: none;
+        color: #fff;
+        font-size:1rem;
+        border:none;
+    }
+    .scroll_next,
+    .scroll_prev{
+        display:none;
+    }
+    .btmfv button{
+        height: 40px;
+        width: 40px;
+        display: flex;
+        bottom:80%;
+        font-size: 20px;
+    }
+    .list_movies{
+        list-style: none;
+        margin-top:30px;
+        margin-left:5px;
+
+    }
+   
+    .Erro_emojin{
+        font-size:8rem;
+    }
+}

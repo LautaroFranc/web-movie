@@ -4,7 +4,8 @@
 .container_Movie {
     color: #fff;
 }
-.form_container {
+
+.formulario_Err,.form_container {
     position: relative;
     z-index: 2;
     display:flex;
@@ -12,9 +13,9 @@
     justify-content: center;
     align-items: center;
     top: 150px;
-    
 }
 
+.formulario_Err button,
 .form_container button {
     margin-left: 20px;
     border-radius:3px;
@@ -22,7 +23,14 @@
     color: #fff;
     padding:15px 20px;
     background-color:#e50914;
+    cursor: pointer;
 }
+.formulario_Err button:active,
+.form_container button:active{
+    background-color:#b20710;
+    outline: 1px solid rgba(255, 255, 255, 0.166);
+}
+.formulario_Err input,
 .form_container input{
     width: 700px;
     height: 50px;
@@ -33,6 +41,27 @@
     border-radius:5px;
     border: 1px solid #434;
 }
+.formulario_Err input{
+    border: 1px solid rgb(255, 0, 0);
+
+ animation: Error 0.1s 3;
+}
+@keyframes Error {
+    0%{
+    
+        margin-right: 4px
+    }
+    50%{
+        
+       margin-left: 4px;
+    }
+    100%{
+        
+       margin-left: 0px;
+        margin-right: 0px
+
+    }
+}
 
 .detall_movie {
     display:flex; 
@@ -41,7 +70,6 @@
     margin-left: 20%;
     top: 80px;
     z-index: 2;
-
 }
 
 .detall_movie h2{
@@ -55,108 +83,38 @@
     font-size: 1.3rem;
     font-family: 'Roboto', sans-serif;
 }
-.Contenr_buscador{
-    display:flex;
-    margin-left:5px;
-    padding-left: 5px;
-    position: relative;
-    flex-direction:row;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    top: 570px;
-}
-
-.Contenr_buscador::-webkit-scrollbar{
-    background:none;
-}
-.list_movies{
-    list-style: none;
-    margin:10px;
-    opacity: 50%;
-    transition: opacity 0.5s;
-}
-.list_movies:hover{
-    opacity:100%;
-}
-.list_movies img{
-    max-width: 200px;
-    width:400px;
-    height: 200px;
-    object-fit: cover;
-}
-.list_movies> a{
-    text-decoration: none;
-    color: #fff;
-    font-size:25px;
-    border:none;
-}
-
-.title p{
-    text-align:center;
-}
-.type{
-    color: rgb(224, 228, 4);
-}
-
-.btmfv button{
-    height: 40px;
-    width: 40px;
-    background-color:rgb(255, 200, 0);
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    position:absolute;
-    bottom:20px;
-    border-radius:50%;
-    cursor: pointer;
-    border: none;
-    justify-self: center;
-    align-self: center;
-    text-align: center;
-    outline: none;
-    cursor: pointer;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-}
-.btmfv button:hover{
-    width: 42px;
-    height: 42px;
-}
-
-
 .pre{
-    display:none;
+    display: none;
 }
-.scroll_next,
-.scroll_prev{
-    width: 70px;
-    height: 70px;
 
-    display:flex;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 768px) {
+    .formulario_Err, .form_container {
+        top: 70px;
+        margin-right:60px;
         
-    border: none;
-    border-radius:100%;
-    color: #e50914;
-    font-size:50px;
-    opacity: 50%;
+    }
+    .formulario_Err input,.form_container input{
+        width: 105%;
+        height: 40px;
+        font-size: 1rem;
+        padding-left: 1px;
+    }
+    .formulario_Err button, .form_container button {
+        margin-right: 10px;
+        padding:12px 15px;
+    }
 
-    position: absolute;
-    top: 155vh;
-    z-index: 5;
-    cursor: pointer;
-    transition: opacity 0.5s;
-}
-.scroll_next{
-    left: 94%;
-}
-.scroll_prev{
-    left:10px;
-}
-
-.scroll_next:hover,
-.scroll_prev:hover{
-    opacity:100%;
-    outline:10px solid rgb(76, 166, 166);
+    .detall_movie h2{
+        margin-bottom: 10px;
+        font-size: 5.7rem;
+    }
+    
+    .detall_movie {
+        margin-left: 10px;
+        top: 10px;
+    }
+    .detall_movie p{
+        padding: 2px 2px;
+        font-size: 2.5rem;
+    }
 }

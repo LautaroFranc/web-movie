@@ -3,12 +3,11 @@
   font:400 1rem/2'Asap',sans-serif;
   display:flex;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 20px;
   box-shadow: 0px -20px 100px rgba(0, 0, 0, 0.72);
-
 }
 .conteiner-text{
-  background-color: rgba(5, 5, 11, 0.914);
+  background-color: rgba(7, 7, 27, 0.914);
   width: 100%;
   box-shadow: 51px -1px 70px 103px rgba(0, 0, 0, 0.303) inset;
   padding: 15px;
@@ -17,21 +16,27 @@
   max-height: 1300px;
 }
 .title{
-  position: absolute;
-  min-width: 400px;
-  margin-left:340px;
+  min-width: 40%;
   font-size: 35px;
-  text-align:center ;
+  padding: 20px;
 }
 .plot{
   color:#ccc;
-  position: relative;
-  margin:auto;
-  margin-left:30px;
-  font-size: 15px;
-  max-height:1300px;
-  max-width: 1300px;
-  align-self: center;
+  min-width: 80%;
+  width:50%;
+  margin-left: 40px;
+}
+
+.contener-data{ 
+  margin-bottom: 40px;
+  list-style: none;
+  max-height: 200px;
+  margin-left:20px;
+}
+.contener-data span::before {
+  content: "";
+  margin-left:20px;
+  border-left: 3px solid #fb0000;
 }
 
 .imgPeli img{
@@ -41,38 +46,89 @@
 .imgPeli .year{
   display: flex;
   justify-content: center;
-  background-color: #00CA58;
+  background-color: #00ca58;
   border-radius:5px;
   font-size: 18px;
 }
 
-.contener-data{
-  display:flex;
-  position: absolute;
-  margin-bottom: 200px;
-  left: 300px;
-  list-style: none;
-}
-.contener-data span{
-  margin-left:50px;
-  border-left: 4px solid #fb0000;
-}
+
 
 .Genere-cont{
-  position: absolute;
-  min-width: 300px;
-  background-color:#fb0000;
+  max-width: 400px;
+  height: 38px;
+  background-color:#ffffff11;
+  outline:1px solid #e9e9e9;
   border-radius: 5px;
-  top: 80px;
-  margin-left: 50px;
+  box-shadow: 0px 5px 0px rgba(8, 4, 4, 0.945);
+  margin: 30px 10px;
   display:flex;
-  left:10px;
+  align-items: center;
   justify-content: center;
-  
 }
 .Genere-item{
-  display: flex;
-  
-  position: relative;
+  background-color: rgb(255, 0, 0);
+  color:#fff;
+  border-radius: 20px;
+  border: none;
+  margin: 0 10px;
+  min-width: 110px;
+  cursor: pointer;
   font-size: 20px;
+}
+
+.Genere-item:hover{
+  background-color: rgb(202, 201, 201);
+}
+.Genere-item:active{
+  background-color: rgb(1, 31, 48);
+  outline: 1px solid rgb(70, 0, 0);
+
+}
+
+@media (max-width: 768px) {
+  .conteiner-text{
+    flex-wrap: wrap;
+  }
+  .title{
+    top: 190px;
+    font-size: 1.2rem;
+    line-height:27px;
+    padding: 10px;
+  }
+  .plot{
+    color:rgb(165, 165, 165);
+    width: 80%;
+    line-height: 25px;
+    margin-left: 10px;
+  }
+  .imgPeli{
+    margin-left: 10px;
+  }
+  .imgPeli img{
+    width: 50%;
+    object-fit: cover;
+  }
+  .imgPeli .year{
+    background-color: #00ca58;
+    border-radius:5px;
+    font-size: 1rem;
+    width: 50%;
+  }
+  .contener-data{ 
+    margin-bottom: 20px;
+    margin-left:10px;
+    width: 80%;
+    font-size:0.8rem;
+  }
+  .contener-data span::before {
+    content: "";
+    margin-left:4px;
+    border-left: 2px solid #fb0000;
+  }
+  
+  .Genere-item{
+    margin: 0 5px;
+    min-width: 30%;
+    font-size: 1rem;
+  }
 }

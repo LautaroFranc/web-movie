@@ -1,5 +1,10 @@
 
-
+export function Poster(payload) {
+  return { 
+      type: "POSTER",
+      payload
+    };
+}
 
 export function addMovieFavorite(payload) {
   return { 
@@ -16,7 +21,7 @@ export function getMovies(titulo) {
       .then(json => {
         dispatch({ type:"GET_MOVIES", payload:json });
       })
-      .catch(err => console.error(err));
+      .catch(err =>console.error(err));
   }
 }
 
@@ -37,9 +42,11 @@ export function RemoveDetalle(){
         .then(r => r.json())
         .then(json => {
           dispatch({ type:"GETMOVIE_DETAIL", payload:json });
-        })
-      .catch(err => console.error(err));
-      
+        });
     }
 }
+
+
+
+
 

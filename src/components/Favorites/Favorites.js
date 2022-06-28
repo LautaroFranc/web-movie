@@ -2,27 +2,29 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from 'react-router-dom';
 import { removeMoviesFavorite } from "../../actions";
+import { BsEmojiFrown } from "react-icons/bs";
 import './Favorites.css';
 
-export class ConnectedList extends Component {
-
-  render() {
+ function ConnectedList(props) {
+ 
+    if (props.moviesFavourites.length>0) {
     return (
       <div className="container">
-        <h2>Películas Favoritas</h2>
+        <h2 className="Titulo">Películas Favoritas</h2>
         <ul className="container_favori">
-        {this.props.moviesFavourites && this.props.moviesFavourites.map(moviesFavourites =>{
+
+        {props.moviesFavourites && props.moviesFavourites.map(moviesFavourites =>{
            return (
-            <li className="list_movies">
+            <li className="list_movies_f">
               <Link to={`/movie/${moviesFavourites.id}`}>
                 <img src={moviesFavourites.poster} />
-                <span className="title">
+                <span className="title_f">
                     <p>{moviesFavourites.title}</p>
-                    <p className="type">{moviesFavourites.type}</p>
+                    <p className="type_f">{moviesFavourites.type}</p>
                 </span>
               </Link>
-              <div className="btm">
-                <button onClick={() => this.props.removeMoviesFavorite(moviesFavourites.id)}>X</button>
+              <div className="btm_f">
+                <button onClick={() => props.removeMoviesFavorite(moviesFavourites.id)}>X</button>
               </div>       
             </li>
           )})}
@@ -30,6 +32,13 @@ export class ConnectedList extends Component {
           
       </div>
     );
+  } else{
+    return (
+      <div className="Null-favorite">
+        <span className="Text-null">You don't have favorite movies</span>
+        <span className="Emojin-null"><BsEmojiFrown /></span> 
+      </div>
+    )
   }
 }
 
