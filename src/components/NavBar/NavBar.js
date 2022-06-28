@@ -2,6 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GrClose } from "react-icons/gr";
+import { GoFileDirectory } from "react-icons/go";
+import { AiFillHome } from "react-icons/ai";
 import './styleNavar.css';
 
 
@@ -48,10 +50,10 @@ export default function NavBar() {
 				<nav>
 					<ul className={menu.ul}>
 							<li className={menu.li}>
-								<NavLink exact to="/" onClick={(e) => onClickCondicion(e)}>Home</NavLink>
+								<NavLink exact to="/" onClick={(e) => onClickCondicion(e)}><AiFillHome/>Home</NavLink>
 							</li>
 							<li className={menu.li}> 
-								<NavLink to="/favs"  onClick={(e) => onClickCondicion(e)}>Favorites</NavLink>
+								<NavLink to="/favs"  onClick={(e) => onClickCondicion(e)}><GoFileDirectory/> Favorites</NavLink>
 							</li>
 					</ul>
 				</nav>

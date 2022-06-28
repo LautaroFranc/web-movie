@@ -87,7 +87,7 @@ const initialState = {
           }
         } 
 
-        case 'REMOVE_MOVIES':{
+        case 'ACTUALIZACION_MOVIES':{
             return{
                 ...state,
                 moviesLoaded:[]

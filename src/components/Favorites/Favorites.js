@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { removeMoviesFavorite } from "../../actions";
 import { BsEmojiFrown } from "react-icons/bs";
 import './Favorites.css';
-
+import { GoTrashcan } from "react-icons/go";
  function ConnectedList(props) {
  
     if (props.moviesFavourites.length>0) {
@@ -24,7 +24,7 @@ import './Favorites.css';
                 </span>
               </Link>
               <div className="btm_f">
-                <button onClick={() => props.removeMoviesFavorite(moviesFavourites.id)}>X</button>
+                <button onClick={() => props.removeMoviesFavorite(moviesFavourites.id)}><GoTrashcan/></button>
               </div>       
             </li>
           )})}

@@ -39,7 +39,7 @@ export function RemoveDetalle(){
 }
 export function RemoveMovie(){
   return{
-     type:"REMOVE_MOVIES",
+     type:"ACTUALIZACION_MOVIES",
  }
 }
  export function getMovieDetail(id){
