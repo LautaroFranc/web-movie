@@ -97,7 +97,7 @@ function Buscador(props) {
           </div>
           <button type="submit">SEARCH</button>
         </form>
-      <button  className={scrollnext} onClick={() =>scroll_next()}><AiOutlineRight/></button>
+      <button  className={scrollnext} onClick={(e) =>scroll_next(e)}><AiOutlineRight/></button>
       <ul className={styleSarch.Contenr_buscador}>
         {props.movie && props.movie.map(movies =>{
           if (movies=='Too many results.') {
