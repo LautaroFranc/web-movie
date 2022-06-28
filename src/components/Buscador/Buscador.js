@@ -24,11 +24,13 @@ function Buscador(props) {
     settitulo({ title: event.target.value });
   }
   function scroll_next(e){
-    console.log(e)
-    document.querySelector('.MoviesBuscador_Contenr_buscador__n0UvF').scrollLeft+=500;
+  
+    document.getElementById("scroll").scrollLeft+=500;
+
   }
   function scroll_prev(){
-    document.querySelector('.MoviesBuscador_Contenr_buscador__n0UvF').scrollLeft-=500;
+    document.getElementById("scroll").scrollLeft-=500;
+
   }
   
   if (props.movie.length>5) {
@@ -98,7 +100,7 @@ function Buscador(props) {
           <button type="submit">SEARCH</button>
         </form>
       <button  className={scrollnext} onClick={(e) =>scroll_next(e)}><AiOutlineRight/></button>
-      <ul className={styleSarch.Contenr_buscador}>
+      <ul id="scroll" className={styleSarch.Contenr_buscador}>
         {props.movie && props.movie.map(movies =>{
           if (movies=='Too many results.') {
             return (
