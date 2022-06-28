@@ -181,6 +181,7 @@
     .formulario_Err, .formulario {
         top:60px;
         margin-right:60px;
+        left: 40px;
     }
     
     .formulario_Err button,.formulario button {

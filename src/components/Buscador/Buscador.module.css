@@ -91,7 +91,7 @@
     .formulario_Err, .form_container {
         top: 70px;
         margin-right:60px;
-        
+        left: 40px;
     }
     .formulario_Err input,.form_container input{
         width: 105%;
