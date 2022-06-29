@@ -32,7 +32,7 @@ function Buscador(props) {
 
   }
   function scroll_prev(){
-    document.querySelector('ul').scrollLeft-=500;
+    document.querySelector('scroll').scrollLeft-=500;
   
   }
   if (props.movie.length>5) {
